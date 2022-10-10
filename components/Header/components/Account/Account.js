@@ -23,7 +23,7 @@ const Account = () => {
         className="cursor-pointer rounded-full"
         onClick={signOut}
       />
-      <p className="pr-3 whitespace-nowrap">Codey Sandeep</p>
+      <p className="pr-3 whitespace-nowrap">{session.user.name}</p>
       <ViewGridIcon className="icon" />
       <ChatIcon className="icon" />
       <BellIcon className="icon" />
