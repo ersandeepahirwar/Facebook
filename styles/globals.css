@@ -5,17 +5,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
   font-family: "Poppins", sans-serif;
-}
-
-@layer components {
-  .icon {
-    @apply w-10 h-10 p-2 hidden xl:inline-flex cursor-pointer rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300;
-  }
-  .publisherIcon {
-    @apply p-2 space-x-1 flex flex-grow items-center justify-center rounded-xl cursor-pointer hover:bg-gray-100;
-  }
-  .postIcon {
-    @apply p-2 space-x-1 flex flex-grow items-center justify-center rounded-xl cursor-pointer hover:bg-gray-100;
-  }
 }
