@@ -6,6 +6,7 @@ import Header from "../components/Header/Header";
 import Login from "../components/Login/Login";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Feed from "../components/Feed/Feed";
+import Widgets from "../components/Widgets/Widgets";
 
 export default function Home({ session }) {
   if (!session) return <Login />;
@@ -20,14 +21,11 @@ export default function Home({ session }) {
         />
         <link rel="icon" href="favicon.ico" />
       </Head>
-
-      {/* Header */}
       <Header />
-
       <main className="flex">
         <Sidebar />
         <Feed />
-        {/* Widgets */}
+        <Widgets />
       </main>
     </div>
   );
