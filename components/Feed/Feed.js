@@ -1,5 +1,6 @@
 import Stories from "./components/Stories/Stories";
 import Publisher from "./components/Publisher/Publisher";
+import Posts from "./components/Posts/Posts";
 
 const Feed = () => {
   return (
@@ -7,7 +8,7 @@ const Feed = () => {
       <div className="mx-auto max-w-md md:max-w-lg lg:max-w-2xl">
         <Stories />
         <Publisher />
-        {/* Posts */}
+        <Posts />
       </div>
     </div>
   );

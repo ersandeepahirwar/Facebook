@@ -6,16 +6,8 @@ import { useSession } from "next-auth/client";
 import { CameraIcon, VideoCameraIcon } from "@heroicons/react/solid";
 import { EmojiHappyIcon } from "@heroicons/react/outline";
 
-import {
-  serverTimestamp,
-  collection,
-  doc,
-  setDoc,
-  getDoc,
-} from "firebase/firestore";
-
+import { serverTimestamp, collection, doc, setDoc } from "firebase/firestore";
 import { ref, getDownloadURL, uploadString } from "firebase/storage";
-
 import { database, storage } from "../../../../firebase";
 
 const Publisher = () => {
