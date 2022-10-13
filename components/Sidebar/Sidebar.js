@@ -19,7 +19,7 @@ const Sidebar = () => {
   const [session, loading] = useSession();
 
   return (
-    <div className="mt-5 p-2 max-w-[600px] xl:min-w-[300px]">
+    <div className="mt-2 p-2">
       <Row src={session.user.image} title={session.user.name} />
       <Row Icon={UserIcon} title="Friends" />
       <Row Icon={UserGroupIcon} title="Groups" />

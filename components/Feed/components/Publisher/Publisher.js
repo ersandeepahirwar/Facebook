@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { useSession } from "next-auth/client";
 
-import { CameraIcon, VideoCameraIcon } from "@heroicons/react/solid";
+import { CameraIcon, TrashIcon, VideoCameraIcon } from "@heroicons/react/solid";
 import { EmojiHappyIcon } from "@heroicons/react/outline";
 
 import { serverTimestamp, collection, doc, setDoc } from "firebase/firestore";
@@ -66,8 +66,8 @@ const Publisher = () => {
   };
 
   return (
-    <div className="mt-6 p-2 bg-white text-gray-500 font-medium rounded-2xl shadow-md">
-      <div className="p-4 space-x-4 flex items-center">
+    <div className="max-w-[300px] sm:max-w-[450px] bg-white text-gray-500 mt-5 sm:mt-7 rounded-2xl shadow-md mx-auto">
+      <div className="flex items-center justify-center flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 p-3">
         <Image
           src={session.user.image}
           alt="User Profile"
@@ -76,11 +76,11 @@ const Publisher = () => {
           layout="fixed"
           className="rounded-full"
         />
-        <form className="flex flex-1">
+        <form className="w-full sm:w-auto flex sm:flex-1">
           <input
             type="text"
-            placeholder={`What's on your mind, ${session.user.name}?`}
-            className="h-12 px-5 flex-grow rounded-full bg-gray-100 focus:outline-none"
+            placeholder={`What's on your mind?`}
+            className="border-none outline-none focus:outline-none bg-gray-100 rounded-full flex-grow text-[13px] px-2 h-8 text-center"
             ref={textRef}
           />
           <button hidden type="submit" onClick={publishPost}>
@@ -95,25 +95,28 @@ const Publisher = () => {
             <img
               src={file}
               alt="Post Thumbnail"
-              className="h-10 object-contain"
+              className="h-[60px] object-contain rounded-xl"
             />
-            <p className="text-xs text-center text-red-500">Remove</p>
+            <TrashIcon className="h-5 text-red-500 mt-1" />
           </div>
         )}
       </div>
-      <div className="p-3 flex justify-evenly border-t">
-        <div className="publisherIcon">
-          <VideoCameraIcon className="h-7 text-red-500" />
-          <p className="text-xs sm:text-sm xl:text-base">Live Video</p>
+      <div className="flex justify-evenly border-t p-2">
+        <div className="flex flex-grow items-center justify-center rounded-xl cursor-pointer hover:bg-gray-100 p-1 sm:space-x-2">
+          <VideoCameraIcon className="h-5 text-red-500" />
+          <p className="hidden sm:inline-flex sm:text-xs">Live Video</p>
         </div>
-        <div onClick={() => fileRef.current.click()} className="publisherIcon">
-          <CameraIcon className="h-7 text-green-400" />
-          <p className="text-xs sm:text-sm xl:text-base">Photo/Video</p>
+        <div
+          onClick={() => fileRef.current.click()}
+          className="flex flex-grow items-center justify-center rounded-xl cursor-pointer hover:bg-gray-100 p-2 sm:space-x-2"
+        >
+          <CameraIcon className="h-5 text-green-400" />
+          <p className="hidden sm:inline-flex sm:text-xs">Photo/Video</p>
           <input hidden type="file" onChange={selectFile} ref={fileRef} />
         </div>
-        <div className="publisherIcon">
-          <EmojiHappyIcon className="h-7 text-yellow-300" />
-          <p className="text-xs sm:text-sm xl:text-base">Feeling/Activity</p>
+        <div className="flex flex-grow items-center justify-center rounded-xl cursor-pointer hover:bg-gray-100 p-2 sm:space-x-2">
+          <EmojiHappyIcon className="h-5 text-yellow-300" />
+          <p className="hidden sm:inline-flex sm:text-xs">Feeling/Activity</p>
         </div>
       </div>
     </div>

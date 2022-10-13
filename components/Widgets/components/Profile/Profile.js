@@ -2,18 +2,19 @@ import Image from "next/image";
 
 const Profile = ({ name, image }) => {
   return (
-    <div className="mb-2 p-2 space-x-3 flex items-center relative cursor-pointer rounded-xl hover:bg-gray-200">
+    <div className="flex justify-center xl:justify-start items-center rounded-xl hover:bg-gray-200 cursor-pointer relative p-1 mb-1 xl:space-x-2">
       <Image
         src={image}
         alt="User Profile"
-        width={50}
-        height={50}
+        width={30}
+        height={30}
         layout="fixed"
         objectFit="cover"
+        objectPosition="top"
         className="rounded-full"
       />
-      <p>{name}</p>
-      <div className="w-3 h-3 rounded-full absolute bottom-2 left-7 bg-green-400"></div>
+      <p className="hidden xl:inline-flex xl:text-[13px]">{name}</p>
+      <div className="absolute w-[7px] h-[7px] bg-green-400 rounded-full bottom-1 left-4 xl:bottom-[4px] xl:left-[-2px]"></div>
     </div>
   );
 };
