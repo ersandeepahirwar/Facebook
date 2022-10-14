@@ -66,8 +66,8 @@ const Publisher = () => {
   };
 
   return (
-    <div className="max-w-[300px] sm:max-w-[450px] bg-white text-gray-500 mt-5 sm:mt-7 rounded-2xl shadow-md mx-auto">
-      <div className="flex items-center justify-center flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 p-3">
+    <div className="mx-auto mt-5 max-w-[300px] rounded-2xl bg-white text-gray-500 shadow-md sm:mt-7 sm:max-w-[450px]">
+      <div className="flex flex-col items-center justify-center space-y-3 p-3 sm:flex-row sm:space-y-0 sm:space-x-3">
         <Image
           src={session.user.image}
           alt="User Profile"
@@ -76,11 +76,11 @@ const Publisher = () => {
           layout="fixed"
           className="rounded-full"
         />
-        <form className="w-full sm:w-auto flex sm:flex-1">
+        <form className="flex w-full sm:w-auto sm:flex-1">
           <input
             type="text"
             placeholder={`What's on your mind?`}
-            className="border-none outline-none focus:outline-none bg-gray-100 rounded-full flex-grow text-[13px] px-2 h-8 text-center"
+            className="h-8 flex-grow rounded-full border-none bg-gray-100 px-2 text-center text-[13px] outline-none focus:outline-none"
             ref={textRef}
           />
           <button hidden type="submit" onClick={publishPost}>
@@ -90,31 +90,31 @@ const Publisher = () => {
         {file && (
           <div
             onClick={removeFile}
-            className="flex flex-col filter cursor-pointer hover:brightness-110 transition transform duration-150 hover:scale-105"
+            className="flex transform cursor-pointer flex-col filter transition duration-150 hover:scale-105 hover:brightness-110"
           >
             <img
               src={file}
               alt="Post Thumbnail"
-              className="h-[60px] object-contain rounded-xl"
+              className="h-[60px] rounded-xl object-contain"
             />
-            <TrashIcon className="h-5 text-red-500 mt-1" />
+            <TrashIcon className="mt-1 h-5 text-red-500" />
           </div>
         )}
       </div>
       <div className="flex justify-evenly border-t p-2">
-        <div className="flex flex-grow items-center justify-center rounded-xl cursor-pointer hover:bg-gray-100 p-1 sm:space-x-2">
+        <div className="flex flex-grow cursor-pointer items-center justify-center rounded-xl p-1 hover:bg-gray-100 sm:space-x-2">
           <VideoCameraIcon className="h-5 text-red-500" />
           <p className="hidden sm:inline-flex sm:text-xs">Live Video</p>
         </div>
         <div
           onClick={() => fileRef.current.click()}
-          className="flex flex-grow items-center justify-center rounded-xl cursor-pointer hover:bg-gray-100 p-2 sm:space-x-2"
+          className="flex flex-grow cursor-pointer items-center justify-center rounded-xl p-2 hover:bg-gray-100 sm:space-x-2"
         >
           <CameraIcon className="h-5 text-green-400" />
           <p className="hidden sm:inline-flex sm:text-xs">Photo/Video</p>
           <input hidden type="file" onChange={selectFile} ref={fileRef} />
         </div>
-        <div className="flex flex-grow items-center justify-center rounded-xl cursor-pointer hover:bg-gray-100 p-2 sm:space-x-2">
+        <div className="flex flex-grow cursor-pointer items-center justify-center rounded-xl p-2 hover:bg-gray-100 sm:space-x-2">
           <EmojiHappyIcon className="h-5 text-yellow-300" />
           <p className="hidden sm:inline-flex sm:text-xs">Feeling/Activity</p>
         </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Row = ({ src, Icon, title }) => {
   return (
-    <div className="p-2 flex items-center justify-center md:justify-start hover:bg-gray-200 rounded-xl cursor-pointer md:space-x-2">
+    <div className="flex cursor-pointer items-center justify-center rounded-xl p-2 hover:bg-gray-200 md:justify-start md:space-x-2">
       {src && (
         <Image
           src={src}
@@ -13,7 +13,7 @@ const Row = ({ src, Icon, title }) => {
           className="rounded-full"
         />
       )}
-      {Icon && <Icon className="w-5 h-5 text-blue-500" />}
+      {Icon && <Icon className="h-5 w-5 text-blue-500" />}
       <p className="hidden md:inline-flex md:text-[13px]">{title}</p>
     </div>
   );

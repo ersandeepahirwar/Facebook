@@ -20,16 +20,16 @@ const Account = () => {
         width={25}
         height={25}
         layout="fixed"
-        className="rounded-full cursor-pointer"
+        className="cursor-pointer rounded-full"
         onClick={signOut}
       />
-      <p className="hidden lg:inline-flex whitespace-nowrap text-[13px] text-gray-700">
+      <p className="hidden whitespace-nowrap text-[13px] text-gray-700 lg:inline-flex">
         {session.user.name}
       </p>
-      <ViewGridIcon className="hidden xl:inline-flex w-6 h-6 text-gray-500 bg-gray-100 rounded-full p-1 hover:bg-gray-200 cursor-pointer" />
-      <ChatIcon className="hidden xl:inline-flex w-6 h-6 text-gray-500 bg-gray-100 rounded-full p-1 hover:bg-gray-200 cursor-pointer" />
-      <BellIcon className="hidden xl:inline-flex w-6 h-6 text-gray-500 bg-gray-100 rounded-full p-1 hover:bg-gray-200 cursor-pointer" />
-      <ChevronDownIcon className="hidden xl:inline-flex w-6 h-6 text-gray-500 bg-gray-100 rounded-full p-1 hover:bg-gray-200 cursor-pointer" />
+      <ViewGridIcon className="hidden h-6 w-6 cursor-pointer rounded-full bg-gray-100 p-1 text-gray-500 hover:bg-gray-200 xl:inline-flex" />
+      <ChatIcon className="hidden h-6 w-6 cursor-pointer rounded-full bg-gray-100 p-1 text-gray-500 hover:bg-gray-200 xl:inline-flex" />
+      <BellIcon className="hidden h-6 w-6 cursor-pointer rounded-full bg-gray-100 p-1 text-gray-500 hover:bg-gray-200 xl:inline-flex" />
+      <ChevronDownIcon className="hidden h-6 w-6 cursor-pointer rounded-full bg-gray-100 p-1 text-gray-500 hover:bg-gray-200 xl:inline-flex" />
     </div>
   );
 };

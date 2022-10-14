@@ -43,13 +43,13 @@ const profiles = [
 
 const Widgets = () => {
   return (
-    <div className="hidden sm:flex flex-col p-3 xl:w-[200px] xl:space-y-2">
-      <div className="flex justify-between items-center text-gray-500 xl:mb-2">
+    <div className="hidden flex-col p-3 sm:flex xl:w-[200px] xl:space-y-2">
+      <div className="flex items-center justify-between text-gray-500 xl:mb-2">
         <p className="text-[14px]">Contacts</p>
         <div className="flex space-x-2">
-          <VideoCameraIcon className="hidden xl:inline-flex h-5" />
-          <SearchIcon className="hidden xl:inline-flex h-5" />
-          <DotsHorizontalIcon className="hidden xl:inline-flex h-5" />
+          <VideoCameraIcon className="hidden h-5 xl:inline-flex" />
+          <SearchIcon className="hidden h-5 xl:inline-flex" />
+          <DotsHorizontalIcon className="hidden h-5 xl:inline-flex" />
         </div>
       </div>
       {profiles.map((profile) => (

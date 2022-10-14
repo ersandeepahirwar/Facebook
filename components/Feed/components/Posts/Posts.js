@@ -14,7 +14,7 @@ const Posts = ({ posts }) => {
   );
 
   return (
-    <div className="max-w-[300px] sm:max-w-[450px] mx-auto">
+    <div className="mx-auto max-w-[300px] sm:max-w-[450px]">
       {realtimePosts
         ? realtimePosts?.docs.map((post) => (
             <Post

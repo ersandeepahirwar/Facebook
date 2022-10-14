@@ -4,7 +4,7 @@ import { signIn } from "next-auth/client";
 
 const Login = () => {
   return (
-    <div className="grid place-items-center mt-[30vh]">
+    <div className="mt-[30vh] grid place-items-center">
       <Image
         src="https://i.ibb.co/Jn0cvJc/Facebook-Logo.png"
         alt="Facebook Logo"
@@ -14,7 +14,7 @@ const Login = () => {
       />
       <p
         onClick={signIn}
-        className=" text-blue-600 border-[2px] border-blue-600 text-[13px] rounded-2xl cursor-pointer px-[15px] py-[5px]"
+        className=" cursor-pointer rounded-2xl border-[2px] border-blue-600 px-[15px] py-[5px] text-[13px] text-blue-600"
       >
         Login with Facebook
       </p>

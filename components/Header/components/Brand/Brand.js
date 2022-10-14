@@ -4,7 +4,7 @@ import { SearchIcon } from "@heroicons/react/outline";
 
 const Brand = () => {
   return (
-    <div className="flex items-center cursor-pointer">
+    <div className="flex cursor-pointer items-center">
       <Image
         src="https://i.ibb.co/VmgnMxS/facebook.webp"
         alt="Facebook Logo"
@@ -12,12 +12,12 @@ const Brand = () => {
         height={25}
         layout="fixed"
       />
-      <div className="flex items-center bg-white border-[1px] rounded-full p-1 ml-2">
+      <div className="ml-2 flex items-center rounded-full border-[1px] bg-white p-1">
         <SearchIcon className="h-4 text-gray-500" />
         <input
           type="text"
           placeholder="Search Facebook"
-          className="hidden lg:inline-flex border-none outline-none focus:outline-none bg-transparent placeholder-gray-500 text-[13px] ml-1"
+          className="ml-1 hidden border-none bg-transparent text-[13px] placeholder-gray-500 outline-none focus:outline-none lg:inline-flex"
         />
       </div>
     </div>

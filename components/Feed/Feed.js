@@ -4,7 +4,7 @@ import Posts from "./components/Posts/Posts";
 
 const Feed = ({ posts }) => {
   return (
-    <div className="h-screen flex-grow overflow-y-auto scrollbar-hide pt-3 pb-44">
+    <div className="h-screen flex-grow overflow-y-auto pt-3 pb-44 scrollbar-hide">
       <div className="">
         <Stories />
         <Publisher />

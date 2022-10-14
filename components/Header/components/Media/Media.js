@@ -5,7 +5,7 @@ import Icon from "./components/Icon/Icon";
 
 const Media = () => {
   return (
-    <div className="hidden sm:inline-flex items-center">
+    <div className="hidden items-center sm:inline-flex">
       <div className="flex">
         <Icon active Source={HomeIcon} />
         <Icon Source={FlagIcon} />

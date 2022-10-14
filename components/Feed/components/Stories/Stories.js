@@ -35,7 +35,7 @@ const stories = [
 
 const Stories = () => {
   return (
-    <div className="flex justify-center space-x-2 mt-1 sm:mt-2">
+    <div className="mt-1 flex justify-center space-x-2 sm:mt-2">
       {stories.map((story) => (
         <Story
           key={story.id}
